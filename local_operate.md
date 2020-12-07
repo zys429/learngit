@@ -47,7 +47,7 @@ $ git config --global user.email "email@example.com"
 
 ### 版本回退
 
-- 要随时掌握工作区的状态，使用`git status`命令。
+- 要随时掌握工作区和暂存区的状态，使用`git status`命令。
 
 - 如果`git status`告诉你有文件被修改过，用`git diff`可以查看修改内容。
 
@@ -73,3 +73,8 @@ $ git config --global user.email "email@example.com"
 
 ------
 
+### 撤销修改
+
+- 当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令`git checkout -- filename`。
+- 当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令`git reset HEAD filename`，就回到了场景1，第二步按场景1操作。
+- 已经提交了不合适的修改到版本库时，想要撤销本次提交，参考[版本回退](https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192)一节，不过前提是没有推送到远程库。
