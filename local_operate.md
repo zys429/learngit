@@ -53,12 +53,23 @@ $ git config --global user.email "email@example.com"
 
 - 用`git log`命令显示从最近到最远的提交日志，每条日志第一行有版本号。
 
-- 我们用以下语句回退到以前的版本
+- 我们用以下语句回退到以前的版本：
 
   ```git
-  $ git reset --hard HEAD^x
+  $ git reset --hard HEAD~x
   ```
 
   x为1表示回退到上一个版本，以此类推。
 
-- 
+- 回到未来某个版本：
+
+  ```git
+  $ git reset --hard commit_id(版本号)
+  ```
+
+- Git提供了一个命令`git reflog`用来记录你的每一次命令,
+
+  ![image-20201207185103169](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20201207185103169.png)
+
+------
+
