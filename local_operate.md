@@ -30,7 +30,7 @@ $ git config --global user.email "email@example.com"
 1. 第一步，用命令`git add`告诉Git，把文件添加到仓库
 
    ```git
-   $ git add readme.txt
+   $ git add local_operate.md
    ```
 
    执行成功没有任何显示。
@@ -38,7 +38,7 @@ $ git config --global user.email "email@example.com"
 2. 第二步，用命令`git commit`告诉Git，把文件提交到仓库
 
    ```git
-   $ git commit -m "wrote a readme file"
+   $ git commit -m "创建了一个git笔记"
    ```
 
    -m 后面的引号里面是提交时的**说明，最好有意义**
@@ -48,5 +48,17 @@ $ git config --global user.email "email@example.com"
 ### 版本回退
 
 - 要随时掌握工作区的状态，使用`git status`命令。
+
 - 如果`git status`告诉你有文件被修改过，用`git diff`可以查看修改内容。
+
+- 用`git log`命令显示从最近到最远的提交日志，每条日志第一行有版本号。
+
+- 我们用以下语句回退到以前的版本
+
+  ```git
+  $ git reset --hard HEAD^x
+  ```
+
+  x为1表示回退到上一个版本，以此类推。
+
 - 
