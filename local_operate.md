@@ -5,8 +5,6 @@
 
 ​        进一步设置，在命令行输入：
 
-​		
-
 ```git
 $ git config --global user.name "Your Name"
 $ git config --global user.email "email@example.com"
@@ -17,7 +15,7 @@ $ git config --global user.email "email@example.com"
 ### 创建版本库
 
 - 在本地创建一个文件夹，在文件夹中右键选择 git bash。
-- 在命令行中输入 git init 就可以可以把这个文件夹变成一个 git 可以管理的仓库（出现 .git 文件夹）
+- 在命令行中输入`git init`就可以可以把这个文件夹变成一个 git 可以管理的仓库（出现 .git 文件夹）
 
 ------
 
@@ -29,7 +27,7 @@ $ git config --global user.email "email@example.com"
 
 根据以下操作添加到版本库：
 
-1. 第一步，用命令 git add 告诉Git，把文件添加到仓库
+1. 第一步，用命令`git add`告诉Git，把文件添加到仓库
 
    ```git
    $ git add readme.txt
@@ -49,3 +47,6 @@ $ git config --global user.email "email@example.com"
 
 ### 版本回退
 
+- 要随时掌握工作区的状态，使用`git status`命令。
+- 如果`git status`告诉你有文件被修改过，用`git diff`可以查看修改内容。
+- 
