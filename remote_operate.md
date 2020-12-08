@@ -22,3 +22,18 @@
 - 创建+切换分支：`git checkout -b <name>`或者`git switch -c <name>`
 - 合并某分支到当前分支：`git merge <name>`
 - 删除分支：`git branch -d <name>`
+
+------
+
+### 手动解决冲突
+
+- 当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
+- 解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。
+- 用`git log --graph`命令可以看到分支合并图
+
+------
+
+### 分支管理策略
+
+- 合并分支时，加上`--no-ff`参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而`fast forward`合并就看不出来曾经做过合并。
+- 本次合并要创建一个新的commit，所以加上`-m`参数，把commit描述写进去。例子：`git merge --no-ff -m "merge with no-ff" dev`。
